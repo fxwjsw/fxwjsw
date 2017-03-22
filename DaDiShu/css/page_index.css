@@ -1,0 +1,193 @@
+
+.page{
+    position:relative;
+    width:100%;
+    margin:20px auto;
+    background-size:100% 100%;
+}
+.bg_up{
+    width:100%;
+    height:62px;
+    overflow: hidden;
+}
+.voice,.pause,.share,.playAgain{
+    width:60px;
+    height:42px;
+    margin: 10px;
+    float: left;
+    text-align: center;
+    line-height: 42px;
+}
+/*声音*/
+.voice{
+    width:42px;
+    background:url(../img/shengNew.png) 0 0 no-repeat;
+}
+/*暂停*/
+.pause{
+    background:url(../img/stopXiao.png) 0 0 no-repeat;
+    background-size:100% 100%;
+    display:none;
+}
+/*playAgain按钮*/
+.playAgain{
+    background:url(../img/playAgain.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    display:none;
+}
+/*分享*/
+.share{
+    float: right;
+}
+.bg_center{
+    position:relative;
+    overflow: hidden;
+    width:100%;
+}
+.dianJiKaiShiDiv{
+    position:absolute;
+    width: 100%;
+    height: 81%;
+    left: 0px;
+    top:0px;
+    z-index:100;
+
+}
+.dianJiKaiShiDiv_bg{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+.dianJiKaiShiDiv_play{
+    position:absolute;
+    left:20%;
+    top:30%;
+    width: 62%;
+    height: 50%;
+    background: url("../img/djks.png");
+    background-size: 100% 100%;
+    z-index:101;
+    opacity: 1;
+}
+.dishus{
+    position: relative;
+    width:100%;
+    overflow: hidden;
+    background-color:#6a3906;
+}
+.dishus_p{
+    position: relative;
+    overflow: hidden;
+}
+.dishus_d{
+    position: relative;
+    width: 100%;
+    background:url(../img/background1/d.png) 0 0 no-repeat;
+    background-size:100% 100%;
+}
+.dishus_c{
+    position: relative;
+    width: 100%;
+    background:url(../img/background1/c.png) 0 0 no-repeat;
+    background-size:100% 100%;
+}
+.dishus_d1{z-index: 1;}
+.dishus_c1{z-index: 3;}
+.dishus_d2{z-index: 4;}
+.dishus_c2{z-index: 6;}
+.dishus_d3{z-index: 7;}
+.dishus_c3{z-index: 9;}
+.dishus_d4{
+    background:url(../img/background1/di.png) 0 0 no-repeat;
+    background-size:100% 100%;
+}
+.dishu{
+    position:absolute;
+    width: 28%;
+    top:100%;
+    background:url(../img/dishu1/dishu1.png) 0 0 no-repeat;
+    background-size:100% 100%;
+    transition: top 0.5s;
+}
+.dishu1{background:url(../img/dishu1/dishu1.png) 0 0 no-repeat;background-size:100% 100%;}
+.dishu2{background:url(../img/dishu2/dishu1.png) 0 0 no-repeat;background-size:100% 100%;}
+.dishu3{background:url(../img/dishu3/dishu1.png) 0 0 no-repeat;background-size:100% 100%;}
+.dishu_d1,.dishu_d2,.dishu_d3{z-index:2;}
+.dishu_d4,.dishu_d5,.dishu_d6{z-index:5;}
+.dishu_d7,.dishu_d8,.dishu_d9{z-index:8;}
+.dishu_d1,.dishu_d4,.dishu_d7{left: 0%;}
+.dishu_d2,.dishu_d5,.dishu_d8{left:36%;}
+.dishu_d3,.dishu_d6,.dishu_d9{left:72%;}
+
+/*获取鼠标事件*/
+.dishus.c_1{cursor:url("../img/chuizi1.png"),default;}
+/*被击中*/
+.dishus.c_2{cursor:url("../img/chuizi2.png"),default;}
+.dishu1_jz_1{background:url(../img/dishu1/dishu3.png) 0 0 no-repeat;background-size:100% 100%;}
+.dishu1_jz_2{background:url(../img/dishu1/dishu4.png) 0 0 no-repeat;background-size:100% 100%;}
+.dishu2_jz_1{background:url(../img/dishu2/dishu3.png) 0 0 no-repeat;background-size:100% 100%;}
+.dishu2_jz_2{background:url(../img/dishu2/dishu4.png) 0 0 no-repeat;background-size:100% 100%;}
+.dishu3_jz_1{background:url(../img/dishu3/dishu3.png) 0 0 no-repeat;background-size:100% 100%;}
+.dishu3_jz_2{background:url(../img/dishu3/dishu4.png) 0 0 no-repeat;background-size:100% 100%;}
+/*按下鼠标事件（未击中）*/
+.dishus.c_3{cursor:url("../img/chuizi3.png"),default;}
+.dishu1_wjz{background:url(../img/dishu1/dishu2.png) 0 0 no-repeat;background-size:100% 100%;}
+.dishu2_wjz{background:url(../img/dishu2/dishu2.png) 0 0 no-repeat;background-size:100% 100%;}
+.dishu3_wjz{background:url(../img/dishu3/dishu2.png) 0 0 no-repeat;background-size:100% 100%;}
+
+.bg_down{
+    position: relative;
+    width:100%;
+    overflow: hidden;
+    margin-top: -30%;
+    padding-bottom: 15px;
+    z-index: 10;
+}
+.data_div,.function_div{
+    display: -webkit-box;
+}
+.rank,.chance,.point{
+    float: left;
+    min-height:24px;
+    position:relative;
+    color:#81511c;
+    font-size:1em;
+    font-weight:bold;
+    text-align:center;
+    display:none;
+    -webkit-box-flex:1;
+}
+/*等级*/
+.rank{}
+/*血量*/
+.chance{}
+/*分数*/
+.point{}
+.background_setting,.dishu_setting,.personage{
+    float: left;
+    margin: 10px;
+    position:relative;
+    -webkit-box-flex:1;
+}
+.background_setting_img:active{
+    background-color: #b17330;
+}
+.background_setting_img,.dishu_setting_img,.personage_img{
+    width: 60px;
+    height: 42px;
+    margin: 0px auto;
+}
+.background_setting_img{background:url(../img/background_setting.png) 0 0 no-repeat;}
+.dishu_setting_img{background:url(../img/dishu_setting.png) 0 0 no-repeat;}
+.personage_img{background:url(../img/personage.png) 0 0 no-repeat;}
+/*play按钮*/
+.play{
+    width:40%;
+    min-height:59px;
+    background:url(../img/start.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    margin: 0px auto;
+}
+
+

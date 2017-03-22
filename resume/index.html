@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE-edge,chrome=1">
+    <meta name="viewport" content="width=dievice-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>个人简历</title>
+    <!--<link href="css/reset.css" rel="stylesheet" type="text/css">-->
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script src="js/iscroll.js"></script>
+    <script>
+        /*iScroll会在页面资源（包括图片）加载完毕100ms之后得到初始化*/
+        var myscroll,wrapper2_js,wrapper2_hc;
+        function loaded(){
+            setTimeout(function(){
+                myscroll=new iScroll("wrapper",{hScroll:false,vScrollbar:false,hScrollbar:false,bounceLock:true});
+                wrapper2_js=new iScroll("wrapper2-js",{hScroll:false,vScrollbar:false,hScrollbar:false,bounceLock:true});
+                wrapper2_hc=new iScroll("wrapper2-hc",{hScroll:false,vScrollbar:false,hScrollbar:false,bounceLock:true});
+            },100);
+        }
+        window.addEventListener("load",loaded,false);
+    </script>
+</head>
+<body>
+    <div class="container">
+       <div class="st-container">
+           <!--nav begin-->
+
+           <input type="radio" name="radio-set" checked="checked" id="st-control-1">
+           <a href="st-panel-1">首页</a>
+           <input type="radio" name="radio-set" id="st-control-2">
+           <a href="st-panel-2">知识</a>
+           <input type="radio" name="radio-set" id="st-control-3">
+           <a href="st-panel-3">技能</a>
+           <input type="radio" name="radio-set" id="st-control-4">
+           <a href="st-panel-4">作品</a>
+           <input type="radio" name="radio-set" id="st-control-5">
+           <a href="st-panel-5">个人</a>
+
+           <!--nav end-->
+        <!--内容-->
+        <div class="st-scroll">
+            <div class="st-icon-panel">
+                <div class="st-icon a-icon">
+                    <div class="st-connecting"></div>
+                    <div id="connecting-1" class="st-roundness" data-icon="1"></div>
+                </div>
+                <div class="st-icon b-icon">
+                    <div class="st-connecting"></div>
+                    <div id="connecting-2" class="st-roundness" data-icon="6"></div>
+                </div>
+                <div class="st-icon c-icon">
+                    <div class="st-connecting"></div>
+                    <div id="connecting-3" class="st-roundness" data-icon="C"></div>
+                </div>
+                <div class="st-icon d-icon">
+                    <div class="st-connecting"></div>
+                    <div id="connecting-4" class="st-roundness" data-icon="E"></div>
+                </div>
+                <div class="st-icon e-icon">
+                    <div class="st-connecting"></div>
+                    <div id="connecting-5" class="st-roundness" data-icon="2"></div>
+                </div>
+            </div>
+            <section class="st-panel" id="st-panel-1">
+                <div class="st-panel-picture"></div>
+                <div class="st-panel-intro">
+                    <div class="st-panel-introText">
+                        <h2>付鑫</h2>
+                        <span>爱好:</span><span>前端开发</span>
+                    </div>
+                    <div class="st-panel-website">
+                        <a href="http://my.csdn.net/cmdshell3011"><div class="st-panel-website-csdn"></div></a>
+                        <a href="https://github.com/fxwjsw"><div class="st-panel-website-gitHub"></div></a>
+                        <a href="http://www.imooc.com/u/3793402"><div class="st-panel-website-imooc"></div></a>
+                        <a href="https://www.zhihu.com/people/fu-xin-43-72/activities"><div class="st-panel-website-zhiHu"></div></a>
+                    </div>
+                </div>
+
+            </section>
+            <section class="st-panel" id="st-panel-2">
+            <h2>前端知识</h2>
+            <div class="st-panel-div">
+                <div class="st-panel-2-title">
+                    <div class="st-panel-2-text">javaScript</div>
+                    <div class="st-panel-2-symbol">-</div>
+                </div>
+                <div id="wrapper2-js">
+                <ul><li>
+                <dl class="st-panel-2-dl">
+                    <dt>一.基本概念</dt>
+                    <dt>1.什么是javaScript的严格模式</dt>
+                    <dd>严格模式是为javaScript定义了一种不同的解析与执行模式，在脚本顶部添加"use strict"启用严格模式。</dd>
+                    <dt>2.javaScript的数据类型</dt>
+                    <dd>基本数据类型Undefined,Null,Boolean,Number,String,和复杂数据类型Object。
+                    基本数据类型的值为简单数据段，引用类型值为引用类型的实例对象，引用类型值按引用访问。</dd>
+                    <dt>3.typeOf作用</dt>
+                    <dd>用来检测给定变量的数据类型的一种操作符，变量未定义返回"undefined"，变量为对象或null返回"Object",变量为函数返回"function"。</dd>
+                    <dt>4.javaScript函数的参数</dt>
+                    <dd>函数的个数和类型都不固定，函数内部用arguments对象（非Array实例与数组类似）来访问参数，参数为值传递。函数无签名因而无法重载，但可以判断参数类型和数量来模仿重载。</dd>
+                    <dt>5.执行环境和作用域</dt>
+                    <dd>执行环境定义了变量和函数有权访问的其他数据，每个执行环境都有一个与之关联的变量对象用以保存环境中的所有变量与对象。；
+                    当代码在一个环境中执行时，会创建变量对象的一个作用域链。作用域链保证对执行环境有权访问的所有变量和函数的有序访问；方向由活动对象向它的包含环境
+                    逐级回溯直至全局执行环境的变量对象。try-catch语句的chatch块和with语句都可以延长作用域链。
+                    javaScript没有块级作用域。
+                    </dd>
+                    <dt>二.引用类型</dt>
+                    <dd>包含Object,Array,Date,RegExp,Function,基本包装类型,单体内置对象</dd>
+                    <dt>1.数组</dt>
+                    <dd>
+                            <dl>
+                                <dt>栈方法：</dt>
+                                <dd>
+                                    <p><span>push()</span>可以接受任意数量的参数把它们逐个添加到数组末尾，并返回修改后的数组长度；</p>
+                                    <p><span>pop()</span>从数组末尾移除最后一项，减少length值，返回移除项；</p>
+                                </dd>
+
+                                <dt>队列方法：</dt>
+                                <dd>
+                                    <span>shift()</span>从数组开头移除第一项，减少length值，返回移除项；
+                                </dd>
+
+                                <dt>重排序方法：</dt>
+                                <dd>
+                                    <p><span>reverse()</span>反转数组项的顺序；</p>
+                                    <p><span>sort()</span>接受一个比较函数进行重排序；</p>
+                                </dd>
+
+                                <dt>操作方法：</dt>
+                                <dd>
+                                    <p><span>concat()</span>基于当前数组中的所有项创建新数组副本，接收的参数添加到副本，然后返回新数组；</p>
+                                    <p><span>splice()</span>删除插入替换任意数量的项：splice(起始位置,删除的项数,插入项,插入项,...);</p>
+                                </dd>
+                                <dt>位置方法：</dt>
+                                <dd>
+                                    <p><span>indexOf()</span>和<span>lastIndexOf()</span>都使用全等查找，返回项数，没找到返回-1；</p>
+                                    <p><span>indexOf()</span>从数组开头向后找；</p>
+                                    <p><span>lastIndexOf()</span>从数组最后向前找;</p>
+                                </dd>
+                                <dt>迭代方法：</dt>
+                                <dd>
+                                    <p>迭代方法都对数组的每一项运行给定函数，且都不会修改数组中包含的值；</p>
+                                    <p><span>every()</span>该函数对每一项都返回ture则返回ture；</p>
+                                    <p><span>filter()</span>返回该函数会返回true的项组成的数组；</p>
+                                    <p><span>forEach()</span>无返回值;</p>
+                                    <p><span>map()</span>返回每次函数调用结果组成的数组;</p>
+                                    <p><span>some()</span>函数对任一项返回true则返回true;</p>
+                                </dd>
+                            <dt>缩小方法：</dt>
+                            <dd>
+                                <p>缩小方法迭代数组中每一项再构建一个最终值；</p>
+                                <p>缩小方法(在每一项上调用的方法(第一项，第二项，项数，数组对象){返回值为第一项}，作为缩小基础的初始值是可选的)</p>
+                                <p><span>reduce()</span>从第一项开始到最后；</p>
+                                <p><span>reduceRight()</span>从最后开始到第一项；</p>
+                            </dd>
+                        </dl>
+                    </dd>
+                    <dt>2.函数</dt>
+                    <dd>
+                        <dl>
+                            <dt>函数声明</dt>
+                            <dd>function fn(){}会触发函数声明提升</dd>
+                            <dt>函数表达式</dt>
+                            <dd>function fn(){}不会触发函数声明提升</dd>
+                            <dt>arguments对象</dt>
+                            <dd>保存函数参数，arguments.callee指向拥有这个arguments对象的函数（严格模式会报错）</dd>
+                            <dt>this对象</dt>
+                            <dd>函数据以执行的环境对象</dd>
+                            <dt>caller属性</dt>
+                            <dd>保存着调用当前函数的函数的引用（严格模式下不能为它赋值）</dd>
+                            <dt>lenght属性</dt>
+                            <dd>保存着函数希望接收的命名参数个数</dd>
+                            <dt>prototype属性</dt>
+                            <dd>保存着函数原型对象，不可枚举for-in无法发现</dd>
+                            <dt>apply(),call,bind()</dt>
+                            <dd>三者都用于改变this指向，第一个参数为this指定的对象</dd>
+                            <dt>apply()</dt>
+                            <dd>第二个参数为数组给原函数再调用原函数并执行</dd>
+                            <dt>call()</dt>
+                            <dd>第二个以及以后的参数为参数来调用原函数并执行</dd>
+                            <dt>bind()</dt>
+                            <dd>第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数并返回对应函数</dd>
+                        </dl>
+
+                    </dd>
+                    <dt>3.基本包装类型</dt>
+                    <dd>包含Boolean,Number,String</dd>
+                    <dt>4.单体内置对象</dt>
+                    <dd>包含Global,Math</dd>
+                    <dt>三.面向对象</dt>
+                    <dd>
+                        <dl>
+                            <dt>1.对象</dt>
+                            <dd>包含基本值、对象或函数的无序属性的集合</dd>
+                            <dt>2.new操作符</dt>
+                            <dd>new操作符调用构造函数:
+                            <p>(1)创建新对象;</p>
+                            <p>(2)将构造函数作用域赋给新对象;</p>
+                            <p>(3)执行构造函数代码;</p>
+                            <p>(4)返回新对象</p>
+                            </dd>
+                            <dt>3.constructor属性用于标识构造函数</dt>
+                            <dd>person1.constructor==Person;</dd>
+                            <dt>4.instanceof属性用于检测对象类型</dt>
+                            <dd>alert(person1 instanceof Person);//true</dd>
+                            <dt>5.创建对象</dt>
+                            <dd>
+                            <dl>
+                                <dt>(1)Object函数</dt>
+                                <dd>var person=new Object();</dd>
+                                <dt>(2)对象字面量</dt>
+                                <dd>
+<pre>
+var person={
+   name:"tom",
+   sayName:function(){}
+};
+</pre>
+                                </dd>
+                                <dd>*(1)和(2)使用同一种接口创建多个对象，会产生大量重复代码</dd>
+                                <dt>(3)工厂模式</dt>
+                                <dd>
+<pre>
+function createPerson(name,age,job){
+   var o=new Object();
+   o.name=name;
+   o.age=age;
+   o.job=job;
+   o.sayName=function(){};
+   retrun o;
+}
+</pre>
+                                </dd>
+                                <dd>*工厂模式无法识别对象</dd>
+                                <dt>(4)构造函数</dt>
+                                <dd>
+<pre>
+function Person(name,age,job){
+   this.name=name;
+   this.age=age;
+   this.job=job;
+   this.sayName=function(){};
+}
+   var person1=new Person("","","");
+   ...
+alert(person1.sayName==person2.sayName);//false;
+</pre>
+                                </dd>
+                                <dd>*构造函数模式的每个实例都包含一个不同的Function实例</dd>
+                                <dt>(5)原型模式</dt>
+                                <dd>
+<pre>
+function Person(){}
+    Person.prototype.name="";
+    Person.prototype.age="";
+    Person.prototype.job="";
+    Person.prototype.sayName=function(){};
+    var person1=new Person("","","");
+    ...
+    alert(person1.sayName==person2.sayName);//true;
+</pre>
+                                </dd>
+                                <dd>
+<pre>
+//更简单的原型模式
+function Person(){}
+    Person.prototype={
+         constructor:Person,//重设构造函数
+         name:"",
+         age:"",
+         job:"",
+         sayName:function(){},
+    }
+var person1=new Person("","","");
+...
+alert(person1.sayName==person2.sayName);//true;
+</pre>
+                                </dd>
+                                <dd>*创建的每个函数都有一个prototyp(原型)属性,指向通过构造函数创建的所有对象的原型对象</dd>
+                                <dd>*为实例添加一个属性时，这个属性就会屏蔽原型对象中保存的同名属性</dd>
+                                <dd>*可以随时为原型添加属性和方法并在所有对象实例中反映出来</dd>
+                                <dd>*实例中的指针只指向原型，而不指向构造函数</dd>
+                                <dd>*重写原型对象切断了现有原型与任何之前已经存在的对象实例之间的联系，它们引用的仍是最初的原型</dd>
+                                <dd>*alert(Person.prototype.constructor==Person);//true获取构造函数</dd>
+                                <dd>*alert(Person.prototype.isPrototypeOf(person1));//true判断是否是原型对象</dd>
+                                <dd>*alert(Object.getPrototypeOf(person1)==Person.prototype);//true获取原型对象</dd>
+                                <dd>*alert(person1.hasOwnProperty("name"));//false判断属性来自原型还是实例</dd>
+                                <dd>*alert("name" in person1);//true对象能返回给定属性就返回true,不论属性来自原型还是实例</dd>
+                                <dd>*for(var property in person1){}枚举所有能通过对象访问的可枚举属性</dd>
+                                <dd>*Object.keys(person1);方法返回包含对象中可枚举的的属性的数组</dd>
+                                <dd>*Object.getOwnPropertyNames(person1);方法返回包含对象所有属性的数组（包含不可枚举的constructor属性）</dd>
+                                <dd>*delete操作符可以删除实例属性，从而可以重新访问原型中的属性</dd>
+                                <dd>缺点</dd>
+                                <dd>*原型模式省略了为构造函数传递参数</dd>
+                                <dd>*原型模式对包含引用类型值的属性的修改会体现在所有实例对象中</dd>
+                                <dt>(6)组合使用构造函数模式和原型模式</dt>
+                                <dd>构造函数模式用于定义实例属性，原型模式用于定义方法和共享属性</dd>
+                                <dd>
+<pre>
+var Person=function(){
+    this.name="bb";
+}
+Person.prototype={
+    constructor:Person,
+    sayName:function(){
+        console.log(this.name);
+    }
+}
+var person1=new Person();
+person1.sayName();
+console.log(Person.prototype.isPrototypeOf(person1));
+</pre>
+                                </dd>
+                            </dl>
+                        </dd>
+                        <dt>6.继承</dt>
+                        <dd>*"实现继承"主要依靠原型链来实现，所有引用类型默认都通过原型链继承了Object</dd>
+                        <dd>
+                            <dt>(1)原型链继承</dt>
+                            <dd>
+<pre>
+function SuperType(){
+    this.colors=["red","blue","green"];
+}
+function SubType(){
+    //继承了SuperType
+    SubType.prototype=new SuperType();
+}
+</pre>
+                            </dd>
+                            <dd>利用原型让一个引用类型继承另一个引用类型的属性和方法，扩展了原型搜索机制</dd>
+                            <dd>给原型添加方法的代码一定要放在替换原型的语句之后</dd>
+                            <dd>使用原型链继承时不能使用对象字面量创建原型方法</dd>
+                            <dd>类似原型的问题，实践中很少单独使用原型链</dd>
+                            <dt>(2)借用构造函数</dt>
+                            <dd>在子类型构造函数内部调用超类型构造函数</dd>
+                            <dd>
+<pre>
+function SuperType(name){
+    this.name=name;
+    this.colors=["red","blue","green"];
+}
+function SubType(){
+    //继承了SuperType
+    SuperType.call(this,"tom");
+}
+var instance1=new SubType();
+instance1.colors.push("yellow");
+alert(instance1.colors);//"red","blue","green","yellow"
+var instance2=new SubType();
+alert(instance2.name);//"tom"
+alert(instance2.colors);//"red","blue","green"
+</pre>
+
+                            </dd>
+                            <dd>单独使用构造函数模式函数无法复用</dd>
+                            <dt>(3)组合继承</dt>
+                            <dd>使用原型链继承属性和方法，借用构造函数继承实例属性</dd>
+                            <dd>
+<pre>
+function SuperType(name){
+   this.name=name;
+   this.colors=["red","blue","green"];
+}
+SuperType.prototype.sayName=function(){
+   alert(this.name);
+}
+function SubType(name,age){
+   //继承属性
+   SuperType.call(this,name);
+   this.age=age;
+}
+//继承方法
+SubType.prototype=new SuperType();
+SubType.sayAge=function(){
+   alert(this.age);
+}
+var instance1=new SubType("tom",29);
+instance1.colors.push("yellow");
+alert(instance1.colors);//"red","blue","green","yellow"
+instance1.sayName();//"tom"
+instance1.sayAge();//29
+var instance2=new SubType("lili",25);
+alert(instance2.colors);//"red","blue","green"
+instance2.sayName();//"lili"
+instance2.sayAge();//"25"
+</pre>
+
+
+                    </dd>
+                    </dl>
+                    </dd>
+                    <dt>四、函数表达式</dt>
+                    <dd>函数声明：function functionName(){}会触发声明提升</dd>
+                    <dd>函数表达式：var functionName=function(){}</dd>
+                    <dt>1.递归</dt>
+                    <dd>函数通过名字调用自身</dd>
+                    <dt>2.闭包</dt>
+                    <dd>指有权访问另一个函数作用域中的变量的函数</dd>
+                    <dd>作用域链本质上是一个指向变量对象的指针列表，它只引用但不实际包含变量对象</dd>
+                    <dd>闭包只能取得包含函数中任何变量的最后一个值</dd>
+                    <dt>2.this对象</dt>
+                    <dd>运行时基于函数的执行环境绑定</dd>
+                    <dd>当函数被作为某个对象的方法调用时，this等于那个对象</dd>
+                    <dd>匿名函数的执行环境具有全局性，因此其this对象通常指向window</dd>
+                    <dd>内部函数被调用时其活动对象搜索this只会搜索到活动对象为止</dd>
+                    <dt>3.模仿块级作用域</dt>
+                    <dd>在块语句中定义的变量，是在包含函数中创建的</dd>
+                    <dd>要将函数声明转化成函数表达式加()</dd>
+                    <dd>匿名函数中的任何变量都会在执行结束时被销毁</dd>
+                    <dd>
+                       (function(){
+                        //块级作用域
+                       })();
+                    </dd>
+                    <dt>4.私有变量</dt>
+                    <dd>在函数中定义的变量因为不能在函数外部访问因而都是私有变量</dd>
+                    <dt>五.BOM</dt>
+                    <dd>浏览器对象模型</dd>
+                    <dd>
+                        <dl>
+                        <dt>1.window对象</dt>
+                        <dd>既是通过javaScript访问浏览器窗口的一个接口，又是ECMScript规定的Global对象</dd>
+                        <dd>在全局作用域中声明的变量函数都会变成window对象的属性和方法</dd>
+                        <dd>frameset框架拥有自己的windowd对象</dd>
+                        <dd>top对象始终指向最高层（最外层）的框架</dd>
+                        <dd>parent对象始终指向当前框架的直接上层框架</dd>
+                        <dd>无框架时window==top==parent</dd>
+                        <dd>self对象始终指向window</dd>
+                        </dl>
+                    </dd>
+                    <dt>六.DOM</dt>
+                    <dd>文档对象模型是针对HTML和XML文档的一个API(应用程序编程接口)</dd>
+                    <dd>
+                        <dl>
+                        <dt>1.node类型</dt>
+                        <dd>由DOM中的所有节点类型实现</dd>
+                        <dt>2.Document类型</dt>
+                        <dd>表示文档</dd>
+                        <dd>
+                            <dl>
+                            <dt>(1)document对象</dt>
+                            <dd>document对象是HTMLDocument(继承自Document类型)的一个实例，表示整个页面，且是window对象属性</dd>
+                            <dd>
+<pre>
+var html=document.documentElement;//取得对html标签的引用
+var body=document.body;//取得对body标签的引用
+
+alert(html==document.childNodes[0]);//true
+alert(html==document.firstChild);//true
+
+var div=document.getElementById("myDiv");//取得id为"myDiv"的元素的引用
+var divs=document.getElementsByTagName("div");//取得页面中所有div元素
+var ipnuts=document.getElementsByName("color");//取得页面中所有name值为"color"的元素
+document.write("要写入的字符串");
+</pre>
+
+
+                            </dd>
+                            <dt>(2)Element类型</dt>
+                            <dd>
+<pre>
+alert(div.getAttribute("id"));//myDiv取得属性值
+div.setAttribute("id","myDiv1");//设置属性值
+div.removeAttribute("id");//移除属性
+var div=document.createElement("div");//创建一个div元素
+document.body.appendChild(div);//把新创建的div添加到body元素中
+</pre>
+                            </dd>
+                            <dt>(2)Text类型</dt>
+                                <dd>
+<pre>
+var textNode=document.createTextNode("hello,world!");
+div.appendChild(textNode);
+document.body.appendChild(div);
+</pre>
+                                </dd>
+                            </dl>
+                        </dd>
+                        </dl>
+                    </dd>
+                    <dt>七.DOM扩展</dt>
+                    <dd>
+<pre>
+var body=document.querySelector("body");//取得body元素
+var body=document.querySelector("#myDiv");//取得id为“myDiv”的元素
+var body=document.querySelector(".selected");//取得class为“selected”的第一个元素
+var body=document.querySelector("img.button");//取得class为“button”的第一个img元素
+querySelectorAll();返回一个NodeList实例
+</pre>
+                    </dd>
+                    <dt>八.事件</dt>
+                    <dd>javaScript与HTML之间的交互通过事件实现</dd>
+                    <dd>
+                        <dl>
+                            <dt>1.事件冒泡</dt>
+                            <dd>事件开始时由最具体的最深层节点接受，然后逐级向上传播到不具体的文档节点</dd>
+                            <dt>2.事件捕获</dt>
+                            <dd>document对象首先接收到事件，然后依次向下传播到具体目标</dd>
+                            <dt>3.事件流三阶段</dt>
+                            <dd>(1)事件捕获阶段;(2)处于目标阶段;(3)事件冒泡阶段;</dd>
+                            <dt>4.DOM2级事件处理程序</dt>
+                            <dd>
+<pre>
+var btn=document.getElementById("myBtn");
+btn.addEventListener("click",function(){
+   alert(this.id);
+},false);
+//false代表事件在冒泡阶段被触发
+//event事件对象
+var handler=function(event){
+   alert(this.id);
+   alert(event.type);
+   //event.target获取事件目标
+   alert(event.target==this);//true
+   //event.cancelable;//允许阻止事件默认行为
+   //event.preventDefault();//阻止事件默认行为
+   //只有在时间程序执行期间，event才会存在
+}
+btn.addEventListener("click",handler,false);
+btn.removeEventListener("click",handler,false);
+</pre>
+                            </dd>
+                        </dl>
+                    </dd>
+            </dl>
+                </li></ul></div>
+
+                <div class="st-panel-2-title">
+                    <div class="st-panel-2-text">html,css</div>
+                    <div class="st-panel-2-symbol">-</div>
+                </div>
+                <div id="wrapper2-hc">
+                    <ul><li>
+                    <dl class="st-panel-2-dl">
+                        <dt></dt>
+                        <dd>html,css内容</dd>
+                    </dl>
+                    </li></ul></div>
+            </div>
+
+            </section>
+            <section class="st-panel" id="st-panel-3">
+                <h2>技能</h2>
+                <div class="st-panel-div"><canvas class="skill-canvas">这是一个画布标签</canvas></div>
+            </section>
+            <section class="st-panel" id="st-panel-4">
+                <h2>作品</h2>
+                <div id="wrapper" class="st-panel-div">
+                <ul>
+                    <li>
+                        <div class="production-explain">一个可爱的打地鼠游戏，练习了javascript和jquery、html、css的基础</div>
+                        <div class="production" style="background-image: url('img/daDiShu.png')"></div>
+                    </li>
+                    <li>
+                        <div class="production-explain">一个简单的javascript数据排序练习</div>
+                        <div class="production" style="background-image: url('img/jsProduction1.png')"></div>
+                    </li>
+                    <li>
+                        <div class="production-explain">小练习，对多个节点数据的递归遍历</div>
+                        <div class="production" style="background-image: url('img/jsProduction2.png')"></div>
+                    </li>
+                    <!--<li>
+                        <div class="production-explain">我的个人简历，一个简单的单页应用,canvas标签的练习</div>
+                        <div class="production"></div>
+                    </li>-->
+                </ul>
+                </div>
+            </section>
+            <section class="st-panel" id="st-panel-5">
+                <h2>个人</h2>
+                <div class="intro">
+                    <ul>
+                        <li>因为学习java而接触了前端</li>
+                        <li>喜欢敲出一行行代码后</li>
+                        <li>各种精彩纷呈的感觉</li>
+                        <li>仿佛通过一个个美妙的音符</li>
+                        <li>创造出一个新的世界</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!--内容end-->
+       </div>
+    </div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

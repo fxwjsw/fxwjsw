@@ -1,0 +1,354 @@
+@font-face{
+    font-family:"Raphaelicons";
+    src:url("fonts/raphaelicons-webfont.eot") format("eot"),
+    url("fonts/raphaelicons-webfont.ttf") format("truetype"),
+    url("fonts/raphaelicons-webfont.woff") format("woff"),
+    url("fonts/raphaelicons-webfont.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family:Georgia,serif;
+    background-color: #ecffff;
+    font-weight: 400;
+    font-size: 16px;
+    color:#333;
+    overflow:hidden;
+    -webkit-font-smoothing:antialiased;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+.clr{
+    width: 0px;
+    height: 0px;
+    overflow:hidden;
+    clear:both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*底部导航*/
+.st-container{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left:0px;
+    top:0px;
+    font-family:"Josefin Slab","Myriad Pro",Arial,sans-ser;
+}
+.st-container > input,
+.st-container > a{
+    position:fixed;
+    bottom:0px;
+    width:20%;
+    height:35px;
+    line-height:35px;
+}
+.st-container > input{
+    opacity:0;
+    z-index:1000;
+}
+.st-container > a{
+    z-index: 10;
+    font-weight:700;
+    font-size:15px;
+    background-color: #0080ff;
+    text-align: center;
+    color:#caffff;
+    text-shadow:1px 1px 1px rgba(151,24,64,0.2);
+}
+#st-control-1,#st-control-1 + a{
+    left: 0%;
+}
+#st-control-2,#st-control-2 + a{
+    left: 20%;
+}
+#st-control-3,#st-control-3 + a{
+    left: 40%;
+}
+#st-control-4,#st-control-4 + a{
+    left: 60%;
+}
+#st-control-5,#st-control-5 + a{
+    left: 80%;
+}
+.st-container input:checked + a,
+.st-container input:checked:hover + a{
+    background-color:#003d79;
+}
+.st-container input:checked + a:after{
+    content:"";
+    width:0px;
+    height:0px;
+    overflow:hidden;
+    border:15px solid transparent;
+    border-bottom-color:#003d79;
+    position:absolute;
+    bottom:100%;
+    left:50%;
+    margin-left: -15px;
+}
+
+.st-container input:hover + a{
+    background-color:#0066cc;
+}
+/*底部导航end*/
+/*内容*/
+.st-scroll,
+.st-panel{
+    height:100%;
+    width:100%;
+    left: 0px;
+    top: 0px;
+}
+.st-scroll{
+    position:relative;
+}
+.st-scroll .st-panel{
+    position:absolute;
+    visibility:hidden;
+    padding:60px 10px 60px 10px;
+    transform:translate3d(0,0,0);
+    -webkit-transform:translate3d(0,0,0);
+    transition:all 0.6s ease-in-out;
+    -webkit-transition:all 0.6s ease-in-out;
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+}
+
+.st-scroll #st-panel-1{top:-100%;}
+.st-scroll #st-panel-2{top:100%;}
+.st-scroll #st-panel-3{left:100%;}
+.st-scroll #st-panel-4{left:-100%;}
+.st-scroll #st-panel-5{top:100%;}
+
+#st-control-1:checked ~ .st-scroll #st-panel-1{
+    visibility: visible;
+    transform:translateY(100%);
+    -webkit-transform:translateY(100%);
+}
+#st-control-2:checked ~ .st-scroll #st-panel-2{
+    visibility: visible;
+    transform:translateY(-100%);
+    -webkit-transform:translateY(-100%);
+}
+#st-control-3:checked ~ .st-scroll #st-panel-3{
+    visibility: visible;
+    transform:translateX(-100%);
+    -webkit-transform:translateX(-100%);
+}
+#st-control-4:checked ~ .st-scroll #st-panel-4{
+    visibility: visible;
+    transform:translateX(100%);
+    -webkit-transform:translateX(100%);
+}
+#st-control-5:checked ~ .st-scroll #st-panel-5{
+    visibility: visible;
+    transform:translateY(-100%);
+    -webkit-transform:translateY(-100%);
+}
+
+.st-icon-panel{
+    position: relative;
+}
+/*右上图标*/
+.st-icon{
+    position: absolute;
+    width: 60px;
+    height: 68px;
+    top:-68px;
+    right: 10px;
+    overflow: hidden;
+    transform:translate3d(0,0,0);
+    -webkit-transform:translate3d(0,0,0);
+    z-index: 1000;
+}
+.st-connecting,.st-roundness{
+    position: absolute;
+}
+/*图标连接部分*/
+.st-connecting{
+    top: 0px;
+    right: 10px;
+    width: 20px;
+    height: 35px;
+    background-color: yellowgreen;
+}
+/*圆形图标*/
+.st-roundness{
+    top: 25px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: goldenrod;
+    border-radius:40px;
+}
+/*圆形图标字体*/
+.st-icon [data-icon]:after{
+    content:attr(data-icon);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-family:"Raphaelicons";
+}
+/*图标动画*/
+#st-control-1:checked ~ .st-scroll .a-icon,
+#st-control-2:checked ~ .st-scroll .b-icon,
+#st-control-3:checked ~ .st-scroll .c-icon,
+#st-control-4:checked ~ .st-scroll .d-icon,
+#st-control-5:checked ~ .st-scroll .e-icon{
+    animation:moveDown 0.6s ease-in-out 0.2s forwards;
+    -webkit-animation:moveDown 0.6s ease-in-out 0.2s forwards;
+    animation-fill-mode : forwards  /*//设置对象状态为动画结束时的状态*/
+}
+@keyframes moveDown{
+    0%{
+        transform:translateY(0px);
+    }
+    80%{
+        transform:translateY(68px);
+    }
+    100%{
+        transform:translateY(60px);
+    }
+}
+@-webkit-keyframes moveDown{
+    0%{
+        -webkit-transform:translateY(0px);
+    }
+    80%{
+        -webkit-transform:translateY(68px);
+    }
+    100%{
+        -webkit-transform:translateY(60px);
+    }
+}
+/*st-panel-1部分*/
+.st-panel-intro{
+    margin:0px auto;
+}
+.st-panel-introText,.st-panel-website{
+    text-align: center;
+}
+#st-panel-1 .st-panel-picture{
+    background:url(../img/myPicture.png) no-repeat;
+    background-size: 100% 100%;
+    width: 200px;
+    height: 200px;
+    margin: 70px auto;
+    border-radius:200px;
+}
+.st-panel-introText span{
+    line-height: 40px;
+}
+.st-panel-website{
+    width: 200px;
+    margin: 0px auto;
+}
+.st-panel-website div{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius:10px;
+    background-size: 100% 100%;
+}
+.st-panel-website-csdn{background: url("../img/csdn.png") no-repeat;}
+.st-panel-website-gitHub{background: url("../img/gitHub.png") no-repeat;}
+.st-panel-website-imooc{background: url("../img/imooc.png") no-repeat;}
+.st-panel-website-zhiHu{background: url("../img/zhiHu.png") no-repeat;}
+
+/*st-panel-1部分end*/
+/*st-panel-2部分*/
+.st-panel h2{
+    position:fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 60px;
+    margin: 0px;
+    padding-left: 10px;
+    line-height: 60px;
+    text-align: left;
+    background-color:#ecffff;
+    z-index: 1000;
+}
+.st-panel-2-title{
+    height: 33px;
+    border:2px solid gray;
+    overflow: hidden;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight:bold;
+    -webkit-box-shadow:5px 5px 5px #888888;
+}
+.st-panel-2-text{
+    float: left;
+}
+.st-panel-2-symbol{
+    float: right;
+    width: 23px;
+}
+.st-panel-2-dl{
+    padding: 5px;
+    border:1px dotted grey;
+}
+/*st-panel-2部分end*/
+.skill-canvas{
+    width: 100%;
+    height: 350px;
+    display:block;
+    margin: 0px auto;
+    background-color:#caffff;
+}
+/*st-panel-3部分end*/
+/*st-panel-4部分end*/
+#wrapper,#wrapper2-js,#wrapper2-hc{
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+}
+#wrapper ul{width:100%;}
+#wrapper2-js ul,#wrapper2-hc ul{width: 100%;margin: 0px;padding: 0px}
+#wrapper li,#wrapper2-js li,#wrapper2-hc li{
+    list-style-type: none;
+    word-wrap:break-word;
+}
+#st-panel-4 .production{
+    width:90%;
+    height:200px;
+    margin: 5%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90% 200px;
+    background-color: darkseagreen;
+    border: 1px solid gray;
+    border-radius: 10px;
+    /*box-shadow:5px 5px 5px #888888;*/
+    /*-webkit-box-shadow:5px 5px 5px #888888;*/
+}
+
+/*st-panel-4部分end*/
+/*st-panel-5部分*/
+#st-panel-5 .intro{
+    margin:40px 20px 20px 20px;
+}
+#st-panel-5 .intro li{
+    font-size: 20px;
+    font-family: "DFKai-SB";
+    text-align: center;
+    line-height: 35px;
+    list-style-type: none;
+}
+/*st-panel-5部分end*/
+/*内容end*/

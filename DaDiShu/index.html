@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    <link  rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link  rel="stylesheet" type="text/css" href="css/page_index.css"/>
+    <link  rel="stylesheet" type="text/css" href="css/background_setting.css"/>
+    <script type="text/javascript">
+  	//取消浏览器的所有事件
+    document.addEventListener('touchstart',function(){
+        return false;
+    },true);
+    // 禁止选择
+    document.oncontextmenu=function(){
+    	return false;
+    };
+    //禁用窗体触摸移动事件
+    window.ontouchmove = function(e) { e.preventDefault(); };
+    //document.body.ontouchmove=function(e) { e.preventDefault(); };
+     
+    </script>
+</head>
+<body>
+<!--背景图-->
+<img class="bjImg"/>
+<!--加载页-->
+<!-- <div class="index_div" data-page="page_loading" style="visibility:visible">
+    <div class="pageIndex">
+        进度条 开始
+        <div class="wrapper">
+            <div class="wrapper-img"></div>
+            <div class="load-bar">
+                <div class="load-bar-inner" data-loading="0">
+                </div>
+            </div>
+        </div>
+        进度条 结束
+    </div>
+</div>  -->
+<!--主页-->
+<div class="index_div" data-page="page_index" style="visibility:hidden">
+    <div class="page"><!--主页-->
+        <!--上层背景-->
+        <div class="bg_up">
+            <div class="voice"></div><!--声音-->
+            <div class="pause"></div><!--暂停-->
+            <div class="playAgain"></div><!--重新开始按钮-->
+            <!--<div class="share"></div>分享-->
+        </div>
+        <!--中间背景-->
+        <div class="bg_center">
+            <div class="dianJiKaiShiDiv" style="display: block">
+                <div class="dianJiKaiShiDiv_bg"></div>
+                <div class="dianJiKaiShiDiv_play"></div><!--开始按钮-->
+            </div>
+            <div class="dishus"><!--地鼠的层-->
+                <!--data-* 属性用于存储页面或应用程序的私有自定义数据。（html5）-->
+                <div class="dishus_p">
+                    <div class="dishus_d1 dishus_d"></div>
+                    <div class="dishus_c1 dishus_c"></div>
+                    <div class="dishu dishu_d1" data-show="0" data-c="s"></div>
+                    <div class="dishu dishu_d2" data-show="0" data-c="s"></div>
+                    <div class="dishu dishu_d3" data-show="0" data-c="s"></div>
+                </div>
+                <div class="dishus_p">
+                    <div class="dishus_d2 dishus_d"></div>
+                    <div class="dishus_c2 dishus_c"></div>
+                    <div class="dishu dishu_d4" data-show="0" data-c="s"></div>
+                    <div class="dishu dishu_d5" data-show="0" data-c="s"></div>
+                    <div class="dishu dishu_d6" data-show="0" data-c="s"></div>
+                </div>
+                <div class="dishus_p">
+                    <div class="dishus_d3 dishus_d"></div>
+                    <div class="dishus_c3 dishus_c"></div>
+                    <div class="dishu dishu_d7" data-show="0" data-c="s"></div>
+                    <div class="dishu dishu_d8" data-show="0" data-c="s"></div>
+                    <div class="dishu dishu_d9" data-show="0" data-c="s"></div>
+                </div>
+                <div class="dishus_d4"></div>
+
+            </div>
+        </div>
+        <!--下层背景-->
+        <div class="bg_down">
+            <div class="data_div">
+                <div class="rank">等级：1</div><!--等级-->
+                <div class="chance">血量：3</div><!--血量-->
+                <div class="point">分数：0</div><!--得分-->
+            </div>
+            <div class="function_div">
+                <div class="background_setting"><div class="background_setting_img"/></div></div><!--背景选择-->
+                <div class="dishu_setting"><div class="dishu_setting_img"/></div></div><!--地鼠选择-->
+                <!--<div class="personage"><div class="personage_img"/></div></div>个人-->
+            </div>
+        </div>
+    <!--声音-->
+    <audio src="music/da.ogg" class='da'></audio><!--击中-->
+    <audio src="music/xiao.ogg" class='xiao'></audio><!--笑-->
+    <audio src="music/shengji.mp3" class='shengji'></audio><!--升级-->
+    <audio src="music/bj.mp3" loop class='bj'></audio><!--背景-->
+    <audio src="music/start.ogg" class='start'></audio><!--开始-->
+    </div>
+</div>
+<!--背景选择-->
+<div class="index_div" data-page="background_setting" style="visibility:hidden">
+    <div class="swiper-container-background-setting">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="slideImg changeImg" src="img/background1/di.png"/></div>
+            <div class="swiper-slide"><img class="slideImg" src="img/background2/di.png"/></div>
+            <div class="swiper-slide"><img class="slideImg" src="img/background3/di.png"/></div>
+        </div>
+        <div class="swiper-pagination-background-setting"></div>
+    </div>
+    <div class="bottom_div">
+        <div class="bottom_div_button" data-action="pageBack">返回</div>
+        <div class="bottom_div_button" data-action="confirm-background-setting">确定</div>
+    </div>
+</div>
+<!--地鼠选择-->
+<div class="index_div" data-page="dishu_setting" style="visibility:hidden">
+    <div class="swiper-container-dishu-setting">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="slideImg changeImg" src="img/dishu1/dishu1.png"/></div>
+            <div class="swiper-slide"><img class="slideImg" src="img/dishu2/dishu1.png"/></div>
+            <div class="swiper-slide"><img class="slideImg" src="img/dishu3/dishu1.png"/></div>
+        </div>
+        <div class="swiper-pagination-dishu-setting"></div>
+    </div>
+    <div class="bottom_div">
+        <div class="bottom_div_button" data-action="pageBack">返回</div>
+        <div class="bottom_div_button" data-action="confirm-dishu-setting">确定</div>
+    </div>
+</div>
+<!--个人-->
+<div class="index_div" data-page="personage" style="visibility:hidden">
+    个人
+</div>
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/page_index.js"></script>
+
+
+</body>
+</html>
