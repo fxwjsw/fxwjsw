@@ -1,0 +1,12 @@
+@font-face{
+    font-family:"Raphaelicons";
+    src:url("../../static/fonts/raphaelicons-webfont.eot") format("eot"),
+    url("../../static/fonts/raphaelicons-webfont.ttf") format("truetype"),
+    url("../../static/fonts/raphaelicons-webfont.woff") format("woff"),
+    url("../../static/fonts/raphaelicons-webfont.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+.logo{
+    background:url("../img/logo.png")  no-repeat;
+}
