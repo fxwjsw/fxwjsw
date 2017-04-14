@@ -1,4 +1,4 @@
-body,div,input,span{margin:0;padding:0;}
+﻿body,div,input,span{margin:0;padding:0;}
 body{
     overflow: hidden;
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
@@ -87,17 +87,12 @@ body{
     }
 }
 /*进度条end*/
+/*进度条end*/
 .index_div{
-    position: absolute;
-    left: 0px;
     width: 100%;
+    max-width: 400px;
+    margin:0px auto;
 	overflow:hidden;
-}
-@media screen and (min-width:600px){
-	.index_div{
-	left:50%;
-	margin-left:-300px;
-    width:600px;
 }
 }
 .bottom_div{
